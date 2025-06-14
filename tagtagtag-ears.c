@@ -885,7 +885,7 @@ static int tagtagtagears_probe(struct platform_device *pdev) {
     }
 
 	// Create device class
-	priv->ears_class = class_create(THIS_MODULE, DEVICE_NAME);
+	priv->ears_class = class_create( DEVICE_NAME);
 	if (IS_ERR(priv->ears_class)) {
 		err = PTR_ERR(priv->ears_class);
         dev_err(dev, "class_create failed: %d", err);
